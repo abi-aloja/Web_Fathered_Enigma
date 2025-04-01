@@ -1,0 +1,72 @@
+{% extends "inicio/encabezado.html" %}
+
+{% load static %}  
+
+{% block titulo %} CONTACT {% endblock %}
+
+<link rel="manifest" >
+    {%load pwa%}
+    {%progressive_web_app_meta%}
+
+{% block contenido %}
+
+
+<div id="main" class="wrapper style1">
+  <div class="container">
+    <header class="major" style="font-family:'n'; margin-top: 20px; font-size: 12px;">
+      <h2>¿Listo para dejar tu huella en Feathered Enigma?</h2>
+      <p>Cuéntanos tu experiencia, ¿Descubriste el secreto?</p>
+    </header>
+    
+    <!-- Form -->
+      <section>
+        <form method="post" action="#">
+          <div class="row gtr-uniform gtr-50">
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="name" id="name" value="" placeholder="nombre" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="email" name="email" id="email" value="" placeholder="e-mail" />
+            </div>
+            <div class="col-12">
+              <textarea name="message" id="message" placeholder="Escribe tu mensaje" rows="6"></textarea>
+            </div>
+            <div class="col-12">
+              <ul class="actions">
+                <li><input type="submit" value="Enviar" class="primary" /></li>
+                <li><input type="reset" value="Limpiar" /></li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+</div>
+
+<style>
+  @media (min-width: 768px) and (max-width: 1280px) {
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  
+    #main {
+      display: flex;
+      flex-direction: column; /* Mantiene la estructura vertical */
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Asegura que cubra toda la pantalla */
+    }
+  
+    .container {
+      width: 90%; /* Se ajusta al ancho de la pantalla sin dejar márgenes grandes */
+      max-width: 800px; /* Evita que se haga muy ancho en resoluciones grandes */
+      margin: auto;
+      padding: 20px;
+    }
+  }
+  
+</style>
+
+{% endblock %}
